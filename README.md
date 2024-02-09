@@ -82,6 +82,12 @@ sfdx force:source:deploy -p force-app
 sfdx config set defaultusername=cicd-prod
 sfdx force:source:deploy -p force-app
 ```
+<< ## Naveen
+The above sfdx force:source:deploy is planning to be deprecated, so we should use :
+# Command : 
+sf project deploy start  -d force-app -o cicd-prod
+where -d is flag to the source-dir and -o for the target org. when you are already on the target org ,
+sf project deploy start  -d force-app is enough. >>
 
 After this, the exact same code should be deployed to all your orgs!
 
